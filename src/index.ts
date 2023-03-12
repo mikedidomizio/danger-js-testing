@@ -30,12 +30,17 @@ type NestedPartial<T> = {
 
 jest.mock('danger', () => jest.fn())
 
+beforeEach(() => {
+  // ensures the global danger object is reset between tests
+  danger = danger1
+})
+
 /**
  * Sets up the danger expectation
  * @param fn  this is a function that will execute that will test danger
  * @param dangerObject this is the danger object that we expect back
  */
-export const dangerTesting = (
+export const dangerTesting = async (
   fn: Function,
   dangerObject: NestedPartial<DangerDSLType>,
 ) => {
@@ -43,9 +48,5 @@ export const dangerTesting = (
     ...danger,
     ...dangerObject,
   }
-
-  // we override the global danger
-  // todo ensure that it resets each time to ensure proper isolation
-  global.danger = danger
-  fn()
+  await fn()
 }
