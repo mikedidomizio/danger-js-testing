@@ -1,7 +1,7 @@
 {
   "name": "danger-testing",
   "version": "1.0.0",
-  "description": "Easy to use testing of Danger/dangerfile",
+  "description": "Easy to use testing of DangerJS/dangerfile",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
