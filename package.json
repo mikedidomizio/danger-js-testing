@@ -1,12 +1,13 @@
 {
   "name": "danger-testing",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Easy to use testing of Danger/dangerfile",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
-  "author": "",
+  "author": "Mike DiDomizio",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
