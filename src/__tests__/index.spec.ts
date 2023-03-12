@@ -1,4 +1,4 @@
-import { dangerTesting, dm, fail, markdown, message, warn } from '../'
+import { dangerTesting, danger, fail, markdown, message, warn } from '../'
 
 describe('dangerTesting', () => {
   beforeEach(() => {
@@ -7,7 +7,7 @@ describe('dangerTesting', () => {
 
   it('should call `fail` function if criteria not met', () => {
     const fn = () => {
-      if (!dm.github.pr.title.match(/^\[\w+-\d+]/)) {
+      if (!danger.github.pr.title.match(/^\[\w+-\d+]/)) {
         fail(`PR title does not match expectation`)
       }
     }
@@ -22,7 +22,7 @@ describe('dangerTesting', () => {
 
   it('should call `markdown` function if criteria not met', () => {
     const fn = () => {
-      if (!dm.github.pr.title.match(/^\[\w+-\d+]/)) {
+      if (!danger.github.pr.title.match(/^\[\w+-\d+]/)) {
         markdown(`PR title does not match expectation`)
       }
     }
@@ -37,7 +37,7 @@ describe('dangerTesting', () => {
 
   it('should call `message` function if criteria not met', () => {
     const fn = () => {
-      if (!dm.github.pr.title.match(/^\[\w+-\d+]/)) {
+      if (!danger.github.pr.title.match(/^\[\w+-\d+]/)) {
         message(`PR title does not match expectation`)
       }
     }
@@ -52,7 +52,7 @@ describe('dangerTesting', () => {
 
   it('should call `warning` function if criteria not met', () => {
     const fn = () => {
-      if (!dm.github.pr.title.match(/^\[\w+-\d+]/)) {
+      if (!danger.github.pr.title.match(/^\[\w+-\d+]/)) {
         warn(`PR title does not match expectation`)
       }
     }
