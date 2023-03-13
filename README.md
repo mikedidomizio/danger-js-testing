@@ -14,7 +14,7 @@ It also works with testing imported DangerJS plugins.
 Until published install via direct GitHub link
 
 ```shell
-npm install git@github.com:mikedidomizio/danger-testing.git
+$ npm install --save-dev git@github.com:mikedidomizio/danger-js-testing.git
 ```
 
 This project assumes that Danger and Jest are already installed in your project.
@@ -40,9 +40,7 @@ export const checkLineAdditions = () => {
 })()
 ```
 
-
 Create a file with your `dangerfile` like `dangerfile.spec.ts` to write your tests.
-
 
 ```ts
 // dangerfile.spec.ts
