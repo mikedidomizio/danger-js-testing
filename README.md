@@ -21,10 +21,10 @@ This project assumes that Danger and Jest are already installed in your project.
 
 ### Usage
 
-In your `dangerfile` write your danger checks inside functions that can be exported
+Move dangerfile checks into a function or separate functions if you haven't done so previously.
 
 ```ts
-// dangerfile
+// dangerfileFunctions.ts
 
 // break your checks into functions that are exported.
 // 📢 optionally, put all the functions inside a bigger function 
@@ -35,12 +35,9 @@ export const checkLineAdditions = () => {
   }
 }
 
-(async() => {
-  checkLineAdditions()
-})()
 ```
 
-Create a file with your `dangerfile` like `dangerfile.spec.ts` to write your tests.
+Create a test file like `dangerfile.spec.ts` to write your tests.
 
 ```ts
 // dangerfile.spec.ts
@@ -73,5 +70,5 @@ written for your tests.  The second is the mock override we attach to the global
 
 When `dangerTesting` is called it updates the global mock and then calls the passed in function.
 
-This module exports the danger functions like `fail`, `markdown`, `message`, and `warn` mocked,
+This module exports danger like global mock functions like `fail`, `markdown`, `message`, and `warn`,
 to allow you to check that they are called as expected.
