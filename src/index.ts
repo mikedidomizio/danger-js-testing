@@ -3,19 +3,15 @@ import { DangerDSLType } from 'danger'
 
 export let danger = danger1 as any
 
-danger.fail = jest.fn()
-danger.markdown = jest.fn()
-danger.message = jest.fn()
-danger.warn = jest.fn()
-
-export const fail = danger.fail
-export const markdown = danger.markdown
-export const message = danger.message
-export const warn = danger.warn
+export const fail = jest.fn()
+export const markdown = jest.fn()
+export const message = jest.fn()
+export const warn = jest.fn()
 
 // we set the global danger to ensure it doesn't come back undefined
 global.danger = danger
 
+// @ts-ignore
 global.fail = fail
 global.markdown = markdown
 global.message = message
@@ -28,12 +24,8 @@ type NestedPartial<T> = {
     : NestedPartial<T[K]>
 }
 
+// ensures accessing the global danger object doesn't throw an error
 jest.mock('danger', () => jest.fn())
-
-beforeEach(() => {
-  // ensures the global danger object is reset between tests
-  danger = danger1
-})
 
 /**
  * Sets up the danger expectation
@@ -44,7 +36,7 @@ export const dangerTesting = async (
   fn: Function,
   dangerObject: NestedPartial<DangerDSLType>,
 ) => {
-  danger = {
+  global.danger = {
     ...danger,
     ...dangerObject,
   }
