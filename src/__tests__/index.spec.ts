@@ -1,5 +1,5 @@
 import { danger, dangerTesting, fail, markdown, message, warn } from '../'
-import { fnFail, fnMarkdown, fnMessage, fnWarn } from '../dangerfileFunctions'
+import { fnFail, fnMarkdown, fnMessage, fnWarn } from './dangerfileFunctions'
 
 describe('dangerTesting', () => {
   beforeEach(() => {

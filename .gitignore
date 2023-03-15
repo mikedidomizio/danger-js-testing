@@ -2,4 +2,8 @@ node_modules
 dist/
 coverage/
 
+# ide
 .idea
+
+# packages
+danger-testing*

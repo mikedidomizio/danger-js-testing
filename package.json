@@ -5,11 +5,12 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist/ && tsc",
     "test": "jest ./src"
   },
   "author": "Mike DiDomizio",
   "license": "MIT",
+  "files": ["index.js", "index.d.ts"],
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.21.0",

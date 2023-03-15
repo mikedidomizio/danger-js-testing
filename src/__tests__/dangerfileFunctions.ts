@@ -1,4 +1,4 @@
-// Example number of functions for dangerfile
+// Example functions for dangerfile
 
 export const fnFail = () => {
   if (!danger.github.pr.title.match(/^\[\w+-\d+]/)) {
