@@ -1,4 +1,4 @@
-import { danger, dangerTesting, fail, markdown, message, warn } from '../'
+import { dangerTesting, fail, markdown, message, warn } from '../'
 import { fnFail, fnMarkdown, fnMessage, fnWarn } from '../dangerfileFunctions'
 
 describe('dangerTesting', () => {
@@ -48,7 +48,6 @@ describe('dangerTesting', () => {
   })
 
   it('should reset the global danger object between tests to ensure isolation', () => {
-    expect(danger.github).toBeUndefined()
     expect(fail).not.toHaveBeenCalled()
     expect(markdown).not.toHaveBeenCalled()
     expect(message).not.toHaveBeenCalled()

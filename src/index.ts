@@ -1,7 +1,7 @@
-import * as danger1 from 'danger'
+// import * as danger1 from 'danger'
 import { DangerDSLType } from 'danger'
 
-export let danger = danger1 as any
+export let danger // = danger1 as any
 
 export const fail = jest.fn()
 export const markdown = jest.fn()

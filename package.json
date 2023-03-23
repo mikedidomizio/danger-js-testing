@@ -1,10 +1,11 @@
 {
   "name": "danger-testing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy to use testing of DangerJS/dangerfile",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "rm -rf dist/ && tsc",
     "test": "jest ./src"
   },
