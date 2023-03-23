@@ -7,7 +7,8 @@ It also works with testing imported DangerJS plugins.
 
 ## Getting started
 
-:warning: This project is currently going through ramp up development and has not been published.  This is not ready for production.
+:warning: This project is currently going through ramp up development.  
+Some things may change, some things may not work.  Submit issues if you find any.
 
 This package requires a minimum Danger and Jest version to function
 but it may function with future and previous versions as well.  Create an issue/discussion if you test a version 
@@ -18,7 +19,7 @@ outside the required versions that you have found that works.
 Until published install via direct GitHub link
 
 ```shell
-$ npm install --save-dev git@github.com:mikedidomizio/danger-js-testing.git
+$ npm install danger-testing --save-dev
 ```
 
 This project assumes that Danger and Jest are already installed in your project.
