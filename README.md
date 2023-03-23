@@ -1,9 +1,13 @@
 # Danger JS Testing
 
+![install size](https://badgen.net/packagephobia/install/danger-testing)
+
 ## About this project
 
 This project was created to allow a developer to test their [DangerJS](https://github.com/danger/danger-js) `dangerfile` through Jest unit testing.
 It also works with testing imported DangerJS plugins.
+
+This package requires zero dependencies and is under 10 kB.  
 
 ## Getting started
 
@@ -15,8 +19,6 @@ but it may function with future and previous versions as well.  Create an issue/
 outside the required versions that you have found that works.
 
 ### Installation
-
-Until published install via direct GitHub link
 
 ```shell
 $ npm install danger-testing --save-dev
