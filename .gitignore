@@ -5,5 +5,5 @@ coverage/
 # ide
 .idea
 
-# packages
+# npm pack
 danger-testing*

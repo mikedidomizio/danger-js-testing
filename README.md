@@ -9,6 +9,10 @@ It also works with testing imported DangerJS plugins.
 
 :warning: This project is currently going through ramp up development and has not been published.  This is not ready for production.
 
+This package requires a minimum Danger and Jest version to function
+but it may function with future and previous versions as well.  Create an issue/discussion if you test a version 
+outside the required versions that you have found that works.
+
 ### Installation
 
 Until published install via direct GitHub link
